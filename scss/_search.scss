@@ -66,6 +66,25 @@
     }
   }
   .search-item {
+    #isload {
+      display: none;
+      margin: auto;
+      width: 100%;
+      text-align: center;
+      @keyframes animal {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(-360deg);
+        }
+      }
+      i {
+        display: inline-block;
+        animation: animal 1s infinite linear;
+        transform-origin: center center;
+      }
+    }
     li {
       background-color: #fff;
       &::after {

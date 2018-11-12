@@ -61,7 +61,6 @@ Player.prototype = {
         this.audio.addEventListener('play', function () {
             
             _this.clock = setInterval(function () {
-                console.log('1')
                 var min = Math.floor(_this.audio.currentTime / 60) + ''
                 var sec = Math.floor(_this.audio.currentTime % 60) + ''
                 sec = sec.length === 2 ? sec : '0' + sec
@@ -142,7 +141,6 @@ Player.prototype = {
     renderLyric: function (arr, obj) {
         this.arr = arr
         this.obj = obj
-        console.log(arr)
         var str = ''
         arr.forEach(function (line, idx) {
             if (line.replace(/\[.+?\]/g, '')) {

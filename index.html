@@ -7,16 +7,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>QQ音乐 - 千万正版音乐海量无损曲库新歌热歌天天畅听的高品质音乐平台！</title>
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_913087_zsgen65ej7.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_913087_85ekf4e3s1m.css">
     <link rel="shortcut icon" href="./imgs/favicon.ico">
     <link rel="stylesheet" href="css/app.css">
 </head>
 
 <body>
-    <!-- http://ws.stream.qqmusic.qq.com/C100002ZUTML0O34hS.m4a?fromtag=0&guid=126548448
-    http://ws.stream.qqmusic.qq.com/C100004RUiXu49ufy1.m4a?fromtag=0&guid=7717704106
-    004RUiXu49ufy1 -->
-
     <header>
         <i class="logo">qq音乐</i>
         <a href="#"><span class="btn-player">播放器</span></a>
@@ -73,7 +69,7 @@
             <div id='search-wrap' class="panel">
                 <div class="search-bar clearfix">
                     <div class="input-wrap active">
-                        <form autocomplete="off" action="http://127.0.0.1:5000/search" method="GET" id="searchform">
+                        <form autocomplete="off" id="searchform">
                             <input type="text" placeholder="搜索歌曲、歌单、专辑" name="w" type="search" id="searchinput">
                             <span class="icon-search"></span>
                         </form>
@@ -83,7 +79,9 @@
                 <div class="search-item">
                     <ul>
                     </ul>
-                    <div id="isload"></div>
+                    <div id="isload">
+                        <i class="iconfont icon-loading"></i>
+                    </div>
                 </div>
             </div>
         </div>

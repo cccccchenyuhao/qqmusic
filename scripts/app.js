@@ -60,7 +60,7 @@ Recommend.prototype = {
             var hotHref = '//y.qq.com/w/taoge.html?ADTAG=myqq&from=myqq&channel=10007100&id=' + song.id
             hotStr += `
                         <li>
-                            <a href="${hotHref}">
+                            <a data-href="${hotHref}">
                                 <div class="main">
                                     <img src="${song.picUrl}">
                                     <span class="listen-count"><i class="icon icon-listen"></i>${song.accessnum}</span>
@@ -132,7 +132,6 @@ Rank.prototype = {
         $('#rank-wrap ul').append(str)
     }
 }
-
 var rank = new Rank()
 
 function Search() {
@@ -173,11 +172,13 @@ Search.prototype = {
     bind: function () {
         var _this = this
         this.$form.submit(function (e) {
+            $('#isload').css('display', 'block')
             _this.keyword = $('#searchinput').val()
             _this.p = 1
             $('.search-item ul').html('')
             e.preventDefault()
             _this.getData()
+            _this.debounce(_this.lazyLoad(), 500)
         })
         this.$cancel.on('click', function () {
             $(this).addClass('hide')
@@ -187,13 +188,12 @@ Search.prototype = {
         $('#searchinput').focusin(function () {
             $('.cancel').removeClass('hide')
             $('.input-wrap').removeClass('active')
-            console.log('in')
         })
         $('#searchinput').focusout(function () {
             $('.cancel').addClass('hide')
             $('.input-wrap').addClass('active')
         })
-        this.debounce(this.lazyLoad(), 500)
+
     },
     getData: function () {
         if (this.isloading) return
@@ -216,7 +216,6 @@ Search.prototype = {
         xhr.send()
     },
     render: function (data) {
-        console.log(data)
         var str = ''
         data.song.list.forEach(function (el) {
             var singername = ''

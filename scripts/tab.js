@@ -10,7 +10,6 @@ Tab.prototype = {
     bind: function () {
         this.node.querySelectorAll('nav > a').forEach(function (aNode, index) {
             aNode.onclick = function () {
-                console.log(index)
                 this.parentElement.querySelectorAll('a').forEach(function (node) {
                     node.classList.remove('active')
                 })
