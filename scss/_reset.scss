@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    height: 100%;
+}
+body {
+    position: relative;
+    font: 12px/1.5 "hiragino sans gb",arial;
+    color: #555;
+    background-color: #F4F4F4;
+}
+
+a {
+    text-decoration: none;
+}
+
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+input {
+    outline: none;
+}

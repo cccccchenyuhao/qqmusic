@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zn-ch">
+
+<head>
+    <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QQ音乐 - 千万正版音乐海量无损曲库新歌热歌天天畅听的高品质音乐平台！</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_913087_zsgen65ej7.css">
+    <link rel="shortcut icon" href="./imgs/favicon.ico">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <!-- http://ws.stream.qqmusic.qq.com/C100002ZUTML0O34hS.m4a?fromtag=0&guid=126548448
+    http://ws.stream.qqmusic.qq.com/C100004RUiXu49ufy1.m4a?fromtag=0&guid=7717704106
+    004RUiXu49ufy1 -->
+
+    <header>
+        <i class="logo">qq音乐</i>
+        <a href="#"><span class="btn-player">播放器</span></a>
+    </header>
+    <div class="tab-wrap">
+        <nav>
+            <a href="#recommond" class="active">推荐</a>
+            <a href="#rank" class="">排行榜</a>
+            <a href="#search" class="">搜索</a>
+        </nav>
+        <div id="content-wrap">
+            <div id="recommend-wrap" class="panel active">
+                <!-- 轮播 -->
+                <div class="carousel">
+                    <ul class="img-ct clearfix">
+                    </ul>
+                    <div class="dot-wrap">
+                        <b class="active"></b>
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                        <b></b>
+                    </div>
+                </div>
+                <!-- 电台 -->
+                <div class="radio-list">
+                    <h2>电台</h2>
+                    <ul class="radio-wrap clearfix">
+                    </ul>
+                </div>
+                <!-- 热门 -->
+                <div class="hot-list">
+                    <h2>热门歌单</h2>
+                    <ul class="hot-wrap clearfix">
+                    </ul>
+                    <p class="list-more">
+                        <a href="https://y.qq.com/?ADTAG=myqq&nomobile=1#type=index">去客户端发现更多好音乐 ></a>
+                    </p>
+                </div>
+                <footer>
+                    <div class="pc-version">
+                        <a href="https://y.qq.com/?ADTAG=myqq&nomobile=1#type=index">查看电脑版网页</a>
+                    </div>
+                    <div class="footer-logo">QQ音乐</div>
+                    <p class="copyright">Copyright © 1998 - <span id="js_cpright_year">2018</span> Tencent. All Rights
+                        Reserved.</p>
+                </footer>
+
+            </div>
+            <div id="rank-wrap" class="panel">
+                <ul>
+                </ul>
+            </div>
+            <div id='search-wrap' class="panel">
+                <div class="search-bar clearfix">
+                    <div class="input-wrap active">
+                        <form autocomplete="off" action="http://127.0.0.1:5000/search" method="GET" id="searchform">
+                            <input type="text" placeholder="搜索歌曲、歌单、专辑" name="w" type="search" id="searchinput">
+                            <span class="icon-search"></span>
+                        </form>
+                    </div>
+                    <div class="cancel hide">取消</div>
+                </div>
+                <div class="search-item">
+                    <ul>
+                    </ul>
+                    <div id="isload"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="player" style="display: none">
+        <div class="player-head clearfix">
+            <div class="head-cover">
+            </div>
+            <div class="head-info">
+                <h3>周杰伦</h3>
+                <p>稻香</p>
+            </div>
+            <i class="head-play iconfont icon-pause"></i>
+        </div>
+        <div class="player-lyric">
+            <div class="lyric-wrap">
+                <p>歌词在这儿</p>
+                <p>请搜索歌曲转到这里播放 : )</p>
+            </div>
+        </div>
+        <div class="player-control">
+            <div class="progress">
+                <span class="curr-time">00:00</span>
+                <div class="progress-bar"></div>
+                <span class="total-time">00:00</span>
+            </div>
+
+        </div>
+        <div class="player-footer">
+            <div class="btn-slideup">点这里收起播放器 : )</div>
+        </div>
+    </div>
+
+    </div>
+    <script src="./scripts/app.js"></script>
+    <script src="./scripts/tab.js"></script>
+    <script src="./scripts/carousel.js"></script>
+    <script src="./scripts/player.js"></script>
+</body>
+
+</html>
