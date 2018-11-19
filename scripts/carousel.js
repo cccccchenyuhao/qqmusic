@@ -54,4 +54,4 @@ Carousel.prototype = {
         clearInterval(this.clock)
     }
 }
-window.Carousel = Carousel
+// window.Carousel = Carousel

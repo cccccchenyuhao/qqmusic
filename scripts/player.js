@@ -44,7 +44,7 @@ Player.prototype = {
             var coverurl = "https://y.gtimg.cn/music/photo_new/T001R150x150M000" + coverid + ".jpg?max_age=2592000"
             _this.getLyric(songid)
             _this.slideDown()
-            _this.audio.src = `http://ws.stream.qqmusic.qq.com/C100${songmid}.m4a?fromtag=0&guid=7717704106`
+            _this.audio.src = `http://dl.stream.qqmusic.qq.com/C100${songmid}.m4a?fromtag=38&guid=7717704106`
             $('.head-cover').css('background-image', `url(${coverurl})`)
             $('.head-info>h3').text(song)
             $('.head-info>p').text(singer)
@@ -175,3 +175,6 @@ Player.prototype = {
 }
 
 var player = new Player()
+
+// http://dl.stream.qqmusic.qq.com/C400002I3Nwa4f9xqA.m4a?guid=7717704106&vkey=056FB2F3D3B01568732E9A0AE58CCE3EB74A300C91D853F8C29FA2999C55CD2538C29F830DF6F91E10331B7E1D626E0C0433571B5E5AB31A&uin=0&fromtag=38
+// http://dl.stream.qqmusic.qq.com/C400001nJ9Uw3wOQ4G.m4a?guid=7717704106&vkey=F0FBBBCB2CD0D2916D7938C1189BA93C92A9DC96DFD73663B2BF47D0F5A3EE4145F5947FF53A69D3649FCBCD02CC2E8C2AE730AD8FE4E04E&uin=0&fromtag=38
